@@ -35,7 +35,15 @@ WebUI.click(findTestObject('Login page/btnSign-in'))
 WebUI.click(findTestObject('Header menu/addNew'))
 String desc = "Ini descriptionya, coba aja baca dulu!"
 String fileName = "stars.java"
-String code = "disiini berisi code yang mudah dibaca"
+String code = """
+int i, j;
+  for (i=1; i<=5; i++) {
+   for (j=1; j<=i; j++) {
+    System.out.print("*"); 
+   }
+   System.out.println();
+  }
+"""
 
 WebUI.setText(findTestObject('Add New Page/gistDesc'), desc)
 WebUI.setText(findTestObject('Add New Page/gistFileName'), fileName)
